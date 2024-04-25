@@ -3,5 +3,5 @@ llama_index
 openai
 Pillow
 requests
-base64
+pybase64
 io
