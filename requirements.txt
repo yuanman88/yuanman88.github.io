@@ -2,7 +2,6 @@ streamlit
 llama_index 
 openai
 Pillow
-os
 requests
 base64
 io
