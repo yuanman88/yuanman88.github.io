@@ -19,8 +19,7 @@ st.set_page_config(page_title="Chat with Your Feng Shui AI Master", page_icon="ð
 #Context
 
 # Set OpenAI API key
-_ = load_dotenv(find_dotenv()) # read local .env file
-openai.api_key = os.environ['OPENAI_API_KEY']
+openai.api_key = st.secrets.openai_key
 
 
 # URL of the image you want to display
