@@ -4,4 +4,3 @@ openai
 Pillow
 requests
 pybase64
-io
