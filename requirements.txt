@@ -1,7 +1,7 @@
 streamlit
 llama_index 
 openai
-PIL
+Pillow
 random
 dotenv
 os
