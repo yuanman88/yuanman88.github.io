@@ -2,7 +2,6 @@ streamlit
 llama_index 
 openai
 Pillow
-random
 dotenv
 os
 requests
