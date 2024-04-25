@@ -4,13 +4,10 @@ from llama_index.llms import OpenAI
 import openai
 from PIL import Image
 import random
-from dotenv import load_dotenv, find_dotenv
 import os
 import json
 import requests
-from streamlit_lottie import st_lottie
 import base64
-from io import BytesIO
 
 
 
