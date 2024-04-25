@@ -1,0 +1,10 @@
+streamlit
+llama_index 
+openai
+PIL
+random
+dotenv
+os
+requests
+base64
+io
