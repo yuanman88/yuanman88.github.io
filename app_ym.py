@@ -1,10 +1,8 @@
-import streamlit as st
-from llama_index import VectorStoreIndex, ServiceContext, Document, StorageContext, load_index_from_storage
-from llama_index.llms import OpenAI
+import streamlit
+from llama_index
 import openai
-from PIL import Image
+from PIL
 import random
-from dotenv import load_dotenv, find_dotenv
 import os
 import json
 import requests
@@ -19,8 +17,7 @@ st.set_page_config(page_title="Chat with Your AI Feng Shui Master", page_icon="ð
 #Context
 
 # Set OpenAI API key
-_ = load_dotenv(find_dotenv()) # read local .env file
-openai.api_key = os.environ['OPENAI_API_KEY']
+openai.api_key = st.secrets.openai_key
 
 
 # URL of the image you want to display
