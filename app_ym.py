@@ -4,10 +4,13 @@ from llama_index.llms import OpenAI
 import openai
 from PIL import Image
 import random
+from dotenv import load_dotenv, find_dotenv
 import os
 import json
 import requests
+from streamlit_lottie import st_lottie
 import base64
+from io import BytesIO
 
 
 
@@ -16,7 +19,8 @@ st.set_page_config(page_title="Chat with Your Feng Shui AI Master", page_icon="ð
 #Context
 
 # Set OpenAI API key
-openai.api_key = st.secrets.openai_key
+_ = load_dotenv(find_dotenv()) # read local .env file
+openai.api_key = os.environ['OPENAI_API_KEY']
 
 
 # URL of the image you want to display
@@ -83,12 +87,12 @@ def load_data():
         index = load_index_from_storage(storage_context)
 
         # Load the finetuned model 
-        ft_model_name = "ft:gpt-3.5-turbo-1106:personal::9F1VeS5G"
+        ft_model_name = "gpt-4-1106-preview"
         ft_context = ServiceContext.from_defaults(llm=OpenAI(model=ft_model_name, temperature=0.3), 
         context_window=2048, 
         
         system_prompt="""
-       You are an AI trained to assist with living space Feng Shui related question.
+       You are an AI feng shui master and you are in the process of redesigning your living space with Feng Shui principles to ensure a harmonious and balanced environment. You're particularly interested in how the placement of certain objects can influence the energy flow and enhance the luck of the owner. Specifically, you're seeking guidance on the direction in which the stove should face to promote positive energy and prosperity in your home. Additionally, you'd appreciate insights on the optimal placement of other objects, such as the aquarium and bed, to further align with Feng Shui principles. Your goal is to gather comprehensive recommendations that foster luck, prosperity, and well-being, ensuring that every aspect of your living space contributes positively to the overall Feng Shui
        Give the correct recommendation.
         """
         )           
