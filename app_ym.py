@@ -14,7 +14,7 @@ from io import BytesIO
 
 
 
-st.set_page_config(page_title="Chat with Your Feng Shui AI Master", page_icon="👩🏻‍🏫", layout="centered", initial_sidebar_state="auto", menu_items=None)
+st.set_page_config(page_title="Chat with Your AI Feng Shui Master", page_icon="👩🏻‍🏫", layout="centered", initial_sidebar_state="auto", menu_items=None)
 
 #Context
 
