@@ -2,7 +2,6 @@ import streamlit
 from llama_index
 import openai
 from PIL
-import os
 import requests
 import base64
 
