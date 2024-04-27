@@ -1,10 +1,8 @@
 import streamlit
 from llama_index
 import openai
-from PILLOW
-import random
+from PIL
 import os
-import json
 import requests
 import base64
 from io import BytesIO
