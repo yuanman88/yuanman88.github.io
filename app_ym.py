@@ -1,12 +1,11 @@
 import streamlit
 from llama_index
 import openai
-from PIL
+from PILLOW
 import random
 import os
 import json
 import requests
-from streamlit_lottie import st_lottie
 import base64
 from io import BytesIO
 
