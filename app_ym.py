@@ -71,7 +71,7 @@ st.markdown(f"""
 
 @st.cache_resource(show_spinner=False)
 def load_data():
-    with st.spinner(text="Doing some calculation – hang tight! This should take 1-2 minutes."):
+    with st.spinner(text="Harmonizing energy flow... Please wait while we balance the chi! This may take 1-2 minutes."):
         
         # Rebuild the storage context
         storage_context = StorageContext.from_defaults(persist_dir="./data/index.vecstore")
@@ -96,10 +96,10 @@ chat_engine = index.as_chat_engine(chat_mode="openai", verbose=True)
 
 if "messages" not in st.session_state.keys(): # Initialize the chat messages history
     st.session_state.messages = [
-        {"role": "assistant", "content": "Ask me Feng Shui question 😊"}
+        {"role": "assistant", "content": "Ask Me Feng Shui Questions Relating to Living Space 😊"}
     ]
 
-if prompt := st.chat_input("Ask Me Any Feng Shui Question On Living Space"):
+if prompt := st.chat_input("Ask Me Feng Shui Questions Relating to Living Space"):
     # Save the original user question to the chat history
     st.session_state.messages.append({"role": "user", "content": prompt})
     st.session_state.new_question = True
