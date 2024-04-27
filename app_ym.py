@@ -5,7 +5,6 @@ from PIL
 import os
 import requests
 import base64
-from io import BytesIO
 
 
 
