@@ -2,7 +2,7 @@ import streamlit as st
 from llama_index import VectorStoreIndex, ServiceContext, Document, StorageContext, load_index_from_storage
 from llama_index.llms import OpenAI
 import openai
-from PIL import image
+from PIL import Image
 import requests
 import base64
 
