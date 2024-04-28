@@ -80,7 +80,7 @@ def load_data():
         index = load_index_from_storage(storage_context)
 
         # Load the finetuned model 
-        ft_model_name = "gpt-4-1106-preview"
+        ft_model_name = "ft:gpt-3.5-turbo-1106:personal:fengshui:9IzbaIn8"
         ft_context = ServiceContext.from_defaults(llm=OpenAI(model=ft_model_name, temperature=0.3), 
         context_window=2048, 
         
